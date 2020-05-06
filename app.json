@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/category/index",
     "pages/goods_list/index",
-    "pages/godds_detail/index",
+    "pages/goods_detail/index",
     "pages/cart/index",
     "pages/collect/index",
     "pages/order/index",
@@ -19,8 +19,7 @@
     "navigationBarBackgroundColor": "#eb4450",
     "navigationBarTitleText": "乐购",
     "navigationBarTextStyle":"white",
-    "enablePullDownRefresh":true,
-    "backgroundColor":"yellow"
+    "enablePullDownRefresh":true
   },
   "tabBar": {
     "color": "#999",

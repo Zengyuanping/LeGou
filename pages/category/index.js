@@ -55,16 +55,32 @@ Page({
   },
 
   //获取分类数据
-  getCates(){
-    request({
-      url: "/categories"
-    })
-    .then(res=>{
-      this.Cates=res.data.message;
+  async getCates(){
+    // request({
+    //   url: "/categories"
+    // })
+    // .then(res=>{
+    //   this.Cates=res.data.message;
+    //   // console.log(res);
+    //   //把接口数据存入到本地存储中
+    //   wx.setStorageSync('cates', {time:Date.now(),data:this.Cates});
+
+    //   //构造左侧大菜单数据
+    //   let leftMenuList=this.Cates.map(v=>v.cat_name);
+    //   //构造右侧商品数据
+    //   let rightContent=this.Cates[0].children;
+    //   this.setData({
+    //     leftMenuList,
+    //     rightContent
+    //   })
+    // })
+    
+    //1 使用es7的async await来发送请求
+    const res=await request({url:"/categories"});
+      this.Cates=res;
       // console.log(res);
       //把接口数据存入到本地存储中
       wx.setStorageSync('cates', {time:Date.now(),data:this.Cates});
-
       //构造左侧大菜单数据
       let leftMenuList=this.Cates.map(v=>v.cat_name);
       //构造右侧商品数据
@@ -73,7 +89,6 @@ Page({
         leftMenuList,
         rightContent
       })
-    })
   },
   //左侧菜单的点击事件
   handleItemTap(e){
