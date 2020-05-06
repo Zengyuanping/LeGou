@@ -5,10 +5,12 @@ page {
   height: 100%;
 }
 .cates .cates_container {
-  height: calc( 100vh - 90rpx);
+  /* less中使用calc的时候要注意 */
+  height: calc( 100vh - 90rpx );
   display: flex;
 }
 .cates .cates_container .left_menu {
+  /* 子项 高度 100% flex */
   flex: 2;
 }
 .cates .cates_container .left_menu .menu_item {
@@ -23,6 +25,7 @@ page {
   border-left: 5rpx solid currentColor;
 }
 .cates .cates_container .right_content {
+  /* 子项 高度 100% flex */
   flex: 5;
 }
 .cates .cates_container .right_content .goods_group .goods_title {

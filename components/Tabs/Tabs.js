@@ -21,11 +21,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    // 点击事件
     handleItemTap(e){
-      //获取点击的索引
+      // 1 获取点击的索引
       const {index}=e.currentTarget.dataset;
-      // console.log(index);
-      //触发 父组件中的事件 自定义
+      // 2 触发 父组件中的事件 自定义
       this.triggerEvent("tabsItemChange",{index});
     }
   }

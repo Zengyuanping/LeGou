@@ -16,14 +16,14 @@ page {
 }
 .revice_address_row .user_info_row .user_phone {
   flex: 3;
-  text-align: center;
+  text-align: right;
 }
 .cart_content .cart_title {
   padding: 20rpx;
   font-size: 36rpx;
   color: var(--themeColor);
-  border-top: 1px solid currentColor;
-  border-bottom: 1px solid currentColor;
+  border-top: 1rpx solid currentColor;
+  border-bottom: 1rpx solid currentColor;
 }
 .cart_content .cart_main .cart_item {
   display: flex;
@@ -101,7 +101,7 @@ page {
   align-items: center;
 }
 .footer_tool .total_price_wrap {
-  flex: 4;
+  flex: 5;
   padding-right: 15rpx;
   text-align: right;
 }
@@ -111,7 +111,7 @@ page {
   font-weight: 600;
 }
 .footer_tool .order_pay_wrap {
-  flex: 2;
+  flex: 3;
   background-color: var(--themeColor);
   color: #fff;
   font-size: 32rpx;

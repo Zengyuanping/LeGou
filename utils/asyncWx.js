@@ -1,8 +1,8 @@
 /**
- * promise 形式 getSetting
+ * promise 形式  getSetting
  */
-export const getSetting = () => {
-  return new Promise((resolve, reject) => {
+export const getSetting=()=>{
+  return new Promise((resolve,reject)=>{
     wx.getSetting({
       success: (result) => {
         resolve(result);
@@ -10,15 +10,14 @@ export const getSetting = () => {
       fail: (err) => {
         reject(err);
       }
-    })
+    });
   })
 }
-
 /**
- * promise 形式 chooseAddresss
+ * promise 形式  chooseAddress
  */
-export const chooseAddress = () => {
-  return new Promise((resolve, reject) => {
+export const chooseAddress=()=>{
+  return new Promise((resolve,reject)=>{
     wx.chooseAddress({
       success: (result) => {
         resolve(result);
@@ -26,15 +25,15 @@ export const chooseAddress = () => {
       fail: (err) => {
         reject(err);
       }
-    })
+    });
   })
 }
 
 /**
- * promise 形式 openSetting
+ * promise 形式  openSetting
  */
-export const openSetting = () => {
-  return new Promise((resolve, reject) => {
+export const openSetting=()=>{
+  return new Promise((resolve,reject)=>{
     wx.openSetting({
       success: (result) => {
         resolve(result);
@@ -42,42 +41,43 @@ export const openSetting = () => {
       fail: (err) => {
         reject(err);
       }
-    })
+    });
   })
 }
 
 /**
- * promise 形式 showModal
+ *  promise 形式  showModal
  * @param {object} param0 参数
  */
-export const showModal = ({ content }) => {
-  return new Promise((resolve, reject) => {
+export const showModal=({content})=>{
+  return new Promise((resolve,reject)=>{
     wx.showModal({
       title: '提示',
       content: content,
-      success: (res) => {
+      success :(res) =>{
         resolve(res);
       },
-      fail: (err) => {
+      fail:(err)=>{
         reject(err);
       }
     })
   })
 }
 
+
 /**
- * promise 形式 showToast
+ *  promise 形式  showToast
  * @param {object} param0 参数
  */
-export const showToast = ({ title }) => {
-  return new Promise((resolve, reject) => {
+export const showToast=({title})=>{
+  return new Promise((resolve,reject)=>{
     wx.showToast({
       title: title,
       icon: 'none',
-      success: (res) => {
+      success :(res) =>{
         resolve(res);
       },
-      fail: (err) => {
+      fail:(err)=>{
         reject(err);
       }
     })
@@ -85,18 +85,38 @@ export const showToast = ({ title }) => {
 }
 
 /**
- * promise 形式 login
+ * promise 形式  login
  */
-export const login = () => {
-  return new Promise((resolve, reject) => {
-   wx.login({
-     timeout:10000,
-     success: (result)=>{
-       resolve(result);
+export const login=()=>{
+  return new Promise((resolve,reject)=>{
+    wx.login({
+      timeout:10000,
+      success: (result) => {
+        resolve(result);
+      },
+      fail: (err) => {
+        reject(err);
+      }
+    });
+  })
+}
+
+/**
+ * promise 形式的 小程序的微信支付
+ * @param {object} pay 支付所必要的参数
+ */
+export const requestPayment=(pay)=>{
+  return new Promise((resolve,reject)=>{
+   wx.requestPayment({
+      ...pay,
+     success: (result) => {
+      resolve(result)
      },
-     fail:(err)=>{
+     fail: (err) => {
        reject(err);
      }
    });
+     
   })
 }
+
