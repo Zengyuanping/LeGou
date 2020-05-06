@@ -1,4 +1,3 @@
-
 // 同时发送异步代码的次数
 let ajaxTimes=0;
 export const request=(params)=>{
@@ -8,7 +7,6 @@ export const request=(params)=>{
     // 拼接header 带上token
     header["Authorization"]=wx.getStorageSync("token");
   }
-
 
   ajaxTimes++;
   // 显示加载中 效果

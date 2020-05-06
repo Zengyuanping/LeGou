@@ -5,8 +5,7 @@ import { login } from "../../utils/asyncWx.js";
 Page({
   // 获取用户信息
   async handleGetUserInfo(e) {
-    try {
-      
+    try {   
     // 1 获取用户信息
     const { encryptedData, rawData, iv, signature } = e.detail;
     // 2 获取小程序登录成功后的code

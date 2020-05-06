@@ -1,4 +1,3 @@
-
 import { getSetting, chooseAddress, openSetting, showModal ,showToast} from "../../utils/asyncWx.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
@@ -14,7 +13,6 @@ Page({
     const address = wx.getStorageSync("address");
     // 1 获取缓存中的购物车数据
     const cart = wx.getStorageSync("cart") || [];
-
     this.setData({ address });
     this.setCart(cart);
 
